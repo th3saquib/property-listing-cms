@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "Lead",
+    "description": "Lead inquiries from property listings"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "phone": { "type": "string", "required": true },
+    "email": { "type": "email" },
+    "message": { "type": "text" },
+    "budget": { "type": "decimal" },
+    "property_interest": { "type": "string" },
+    "source": { "type": "string", "default": "website" },
+    "status": {
+      "type": "enumeration",
+      "enum": ["new", "contacted", "qualified", "converted", "lost"],
+      "default": "new"
+    }
+  }
+}

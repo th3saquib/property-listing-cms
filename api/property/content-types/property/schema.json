@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "singularName": "property",
+    "pluralName": "properties",
+    "displayName": "Property",
+    "description": "Real estate property listings"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "description": { "type": "richtext" },
+    "price": { "type": "decimal", "required": true },
+    "type": {
+      "type": "enumeration",
+      "enum": ["apartment", "villa", "plot", "commercial", "penthouse"],
+      "required": true
+    },
+    "bhk": { "type": "integer" },
+    "area_sqft": { "type": "decimal" },
+    "city": { "type": "string", "required": true },
+    "locality": { "type": "string" },
+    "address": { "type": "text" },
+    "images": { "type": "media", "multiple": true, "allowedTypes": ["images"] },
+    "amenities": { "type": "json" },
+    "is_featured": { "type": "boolean", "default": false },
+    "contact_name": { "type": "string" },
+    "contact_phone": { "type": "string" },
+    "rera_number": { "type": "string" }
+  }
+}
